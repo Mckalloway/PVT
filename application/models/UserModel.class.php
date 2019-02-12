@@ -23,13 +23,12 @@ public function connectUser($POST) {
 
             $_SESSION['Id'] = $user['Id'];
             $_SESSION['email'] = $user['email'];
-            $_SESSION['password'] = $user['password'];
             $_SESSION['lastName'] = $user['lastName'];
             $_SESSION['firstName'] = $user['firstName'];
             
            
             $http = new Http();
-            $http->redirectTo('/');
+            $http->redirectTo('/admin');
 
         }
     

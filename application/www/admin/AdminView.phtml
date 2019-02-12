@@ -1,0 +1,37 @@
+
+
+<div class="infos">
+
+<table>
+    <caption>Liste des messages</caption>
+        <thead>
+            <tr>
+                <th> Nom Prénom </th>
+                <th> Email </th>
+                <th> Adresse </th>
+                <th> Sujet </th>
+                <th> Message </th>
+                
+            </tr>
+
+        </thead>
+        <tbody>
+        <?php foreach ($userInfo as $userInfos): ?>
+        <tr>
+            
+            <td><?= ($userInfos['LastName']) ?> <?= ($userInfos['FirstName']) ?></td>
+            <td><?= ($userInfos['Email']) ?> </td>
+            <td><?= ($userInfos['Adresse'])?><?= ($userInfos['City'])?><?= ($userInfos['ZipCode'])?> </td>
+            <td><?= ($userInfos['Why']) ?></td>
+            <td><?= ($userInfos['Message']) ?></td>
+            
+            
+            
+        </tr>
+        <?php endforeach ?>
+
+    </tbody>
+</table> 
+
+
+</div>
