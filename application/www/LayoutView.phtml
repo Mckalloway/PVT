@@ -23,95 +23,84 @@
     <!-- JavaScript de l'application -->
     <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
 </head>
-<body>
+<body class="bg-light">
+
 
     <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 
-    <header>
+        <div class="container">
 
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+            <a class="navbar-brand js-scroll-trigger" href="<?= $requestUrl ?>">PVT Plomberie</a>
+           <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>-->
+                
+            
+            <div class="collapse navbar-collapse" id="navbarResponsive">
 
-            <div class="container">
+                <ul class="navbar-nav text-uppercase ml-auto">
 
-                <a class="navbar-brand" href="<?= $requestUrl ?>/">PVT Plomberie</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#home">Accueil</a>
+                    </li>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#prestation">Nos prestations</a>
+                    </li>
 
-                    <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#achievements">Exemple de réalisation</a>
+                    </li>
 
-                        <li class="nav-item active">
-                            <a class="nav-link" href="<?= $requestUrl ?>/">Accueil<span class="sr-only">(current)</span></a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">A propos</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= $requestUrl ?>/prestation">Nos prestations</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="<?= $requestUrl ?>/contact">Contact</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= $requestUrl ?>/about">A propos</a>
-                        </li>
+                </ul>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= $requestUrl ?>/contact">Contact</a>
-                        </li>
-                    </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main>
+        <!-- Affichage du template lié à la vue -->
+        <?php include $this->viewData['template']; ?>
+    
+    </main> 
+
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <p class="copyright">© copyright 2019 PVT Plomberie | Mention légale</p>
 
                 </div>
 
             </div>
-            
-        </nav>
 
-    </header>
+        </div>
 
+    </footer>
 
+  
 
-
-
-
-<main>
-    <!-- Affichage du template lié à la vue -->
-    <?php include $this->viewData['template']; ?>
-    
-</main>
+ 
 
 
 
-<!-- Pied de page commun -->
-<footer>
-    
-    <div class="container">
 
-        <small>Copyright 2019 | PVT Plomberie| <a href="<?= $requestUrl ?>/login">Admin</a> </small>
-
-    </div>
-
-    <div class="adminco">
-
-        <div class="container">
-
-            <ul>
-
-                <?php if(array_key_exists('firstName', $_SESSION)): ?>
-                    <li>
-                        <a class="button button-primary" href="<?= $requestUrl ?>/admin">Parti admin</a>
-                    </li>
-                    <li class="layout-right">
-                        <p class="welcome">Bonjour <strong><?= $_SESSION['firstName'].' '.$_SESSION['lastName'] ?></strong> !</p>
-                        <a class="button button-primary" href="<?=$requestUrl?>/logout">Déconnexion</a>
-                    </li>
-                <?php endif ?>
-
-            </ul>
-
-        </div>  
-
-    </div>
-    
-</footer>
 
 <!-- Code principal JavaScript de l'application -->
 <script src="<?= $wwwUrl ?>/js/main.js"></script>

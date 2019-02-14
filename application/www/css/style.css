@@ -1,60 +1,127 @@
-/******CSS GENERAL******/
-
+/********GESTION CSS GENERAL********/
 * {
     outline: none !important;
     scroll-behavior: smooth;
-}
-
-
-
-
-
-
-/******CSS HEADER *****/
-
-header {
+ }
+ 
+ header {
     position: relative;
     z-index: 1000000;
-}
+ }
+ 
+ p {
+    font-size: 1.15rem;
+ }
 
-.navbar {
-    background: transparent !important;
-}
-
-
-
-
-
-
-/******CSS ACCUEIL*****/
-
-
-.banner {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../images/banner.jpg);
-    background-size: cover;
-    margin-bottom: 0;
-}
-.jumbotron {
-    margin-bottom: 0 !important;
-}
-.height100p {
-    height: 100vh;
-}
-.h100 {
-    height: 100%;
+body {
+    text-align: center;
 }
 
 
-.infos,
-.contact {
+/********GESTION CSS NAVBAR********/
+
+
+#mainNav {
+    background-color: rgba(255, 255, 255, 1);
+}
+  
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #fed136;
+    border: 0;
+    background-color: #fed136;   
+}
+  
+#mainNav .navbar-brand {
+    color: grey;
+}
+  
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: #fec503;
+}
+  
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 400;
+    padding: 0.75em 0;
+    letter-spacing: 1px;
+    color:grey;
+    padding-right: 20px;
+}
+  
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #fed136;
+}
+
+
+/********GESTION CSS LOGO********/
+
+
+.entreprise {
     padding-top: 200px;
+    padding-bottom: 200px;
+}
+.logo {
+    width: 100%;
+}
+.logo img {
+    width: 100%;
 }
 
 
+/********GESTION CSS PRESTATION********/
+
+#prestation {
+    padding-bottom: 200px;
+}
+#prestation h3 {
+    padding-bottom: 60px;
+}
+#prestation h4 {
+    text-align: center;
+}
+
+
+
+
+
+/********GESTION CSS EXEMPLE********/
+.exemple {
+    padding-bottom: 200px;
+}
+.exemple h3{
+    padding-bottom: 60px;
+}
+
+
+/********GESTION CSS EXEMPLE********/
+
+
+.propos {
+    padding-bottom: 200px;
+}
+.propos h3{
+    padding-bottom: 60px;
+}
+
+.propos .button .btnD1 {
+    border-radius: 20px !important;
+    font-size: 1.2rem !important;
+    margin-top: 40px !important;
+    text-align: center !important;
+ }
+.button {
+text-align: center;
+}
+
+/********GESTION CSS CONTACT********/
+
+.contact {
+    padding-top: 100px;
+}
 
 
 /******CSS Login*******/
@@ -80,7 +147,13 @@ header {
 /********CSS footer ********/
 
 footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
     background: aqua;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .adminco ul li {
