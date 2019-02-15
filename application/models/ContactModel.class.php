@@ -11,13 +11,14 @@ public function addPost($POST) {
 
 
     $form = $data->executeSql('INSERT INTO posts 
-                    (LastName, FirstName, Email, Adresse, City, ZipCode, Why, Message)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+                    (LastName, FirstName, Email, Phone, Adresse, City, ZipCode, Why, Message)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
                     [
                 
                         $POST['LastName'],
                         $POST['FirstName'],
                         $POST['Email'],
+                        $POST['Phone'],
                         $POST['Adresse'],
                         $POST['City'],
                         $POST['ZipCode'],

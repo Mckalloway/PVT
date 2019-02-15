@@ -1,37 +1,39 @@
 
 
-<div class="infos">
+<div class="show">
 
-<table>
-    <caption>Liste des messages</caption>
-        <thead>
-            <tr>
-                <th> Nom Prénom </th>
-                <th> Email </th>
-                <th> Adresse </th>
-                <th> Sujet </th>
-                <th> Message </th>
-                
-            </tr>
+    <div class="container">
+        <h2>Liste des messages</h2>
+        <table class="table">
 
-        </thead>
-        <tbody>
-        <?php foreach ($userInfo as $userInfos): ?>
-        <tr>
-            
-            <td><?= ($userInfos['LastName']) ?> <?= ($userInfos['FirstName']) ?></td>
-            <td><?= ($userInfos['Email']) ?> </td>
-            <td><?= ($userInfos['Adresse'])?><?= ($userInfos['City'])?><?= ($userInfos['ZipCode'])?> </td>
-            <td><?= ($userInfos['Why']) ?></td>
-            <td><?= ($userInfos['Message']) ?></td>
-            
-            
-            
-        </tr>
-        <?php endforeach ?>
+            <thead>
 
-    </tbody>
-</table> 
+                <tr>
+                <th scope="col">Nom Prénom</th>
+                <th scope="col">Email</th>
+                <th scope="col">Téléphone</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Sujet</th>
+                <th scope="col">Message</th>
+                </tr>
 
+            </thead>
+
+            <tbody>
+            <?php foreach ($userInfo as $userInfos): ?>
+                <tr>
+                <td><?= ($userInfos['LastName']) ?> <?= ($userInfos['FirstName']) ?></td>
+                <td><?= ($userInfos['Email']) ?> </td>
+                <td><?= ($userInfos['Phone']) ?> </td>
+                <td><?= ($userInfos['Adresse'])?><?= ($userInfos['City'])?><?= ($userInfos['ZipCode'])?> </td>
+                <td><?= ($userInfos['Why']) ?></td>
+                <td><?= ($userInfos['Message']) ?></td>
+                </tr>
+                <?php endforeach ?>
+            </tbody>
+
+        </table>
+
+    </div>
 
 </div>

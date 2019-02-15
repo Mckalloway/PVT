@@ -10,7 +10,7 @@ class ContactController
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
     	 */
-	
+		var_dump('la');
     }
 
     public function httpPostMethod(Http $http, array $formFields)
