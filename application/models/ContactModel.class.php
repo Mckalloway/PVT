@@ -26,7 +26,12 @@ public function addPost($POST) {
                         $POST['Message']
                     ]);
 
+                    $http = new Http();
+                    $http->redirectTo('/');
         }
-    
+
    
 }
+
+
+?>

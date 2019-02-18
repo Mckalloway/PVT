@@ -97,7 +97,7 @@ body {
 }
 
 
-/********GESTION CSS EXEMPLE********/
+/********GESTION CSS ABOUT********/
 
 
 .propos {
@@ -225,6 +225,7 @@ text-align: center;
 
 .show {
     padding-top: 100px;
+    padding-bottom: 30%;
 }
 
 
@@ -246,4 +247,25 @@ footer {
 
 
 
+@media (min-width: 992px) {
 
+    .navbar-expand-lg .navbar-nav .navbar-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    
+ }
+
+ @media (max-width: 660px)
+ {
+ .register-form input{
+    margin-bottom: 5px;
+    width: 200px;
+    height: 40px;
+    border-radius: 0px;
+ }
+ .register-form textarea{
+     width: 130%;
+ }
+
+}

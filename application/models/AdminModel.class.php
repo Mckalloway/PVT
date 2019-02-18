@@ -19,9 +19,26 @@ class AdminModel {
         
     }
 
+    public function removeMessage($id) 
+    {
+
+        $data = new Database();
+        $removeInfo = $data->query('DELETE 
+                                    FROM posts
+                                    WHERE Id = ?',
+                [
+                    $id
+                ]);
+
+    }
+
+
+
 
 
 
 
 
 }
+
+?>

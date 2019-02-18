@@ -28,6 +28,7 @@
                 <td><?= ($userInfos['Adresse'])?><?= ($userInfos['City'])?><?= ($userInfos['ZipCode'])?> </td>
                 <td><?= ($userInfos['Why']) ?></td>
                 <td><?= ($userInfos['Message']) ?></td>
+                <td><a href="<?= $requestUrl ?>/admin/remove?Id=<?= $userInfos['Id'] ?>"><i class="fa fa-remove"></a></i></td>
                 </tr>
                 <?php endforeach ?>
             </tbody>
